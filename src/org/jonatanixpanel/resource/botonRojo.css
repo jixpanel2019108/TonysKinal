@@ -1,0 +1,46 @@
+
+.button {
+    -fx-padding: 2 10 2 10;   
+    -fx-border-color: #f14747;
+    -fx-border-width: 0;
+    -fx-background-radius: 5;
+    -fx-background-color: #f14747;
+    -fx-font-family: "Calibri";
+    -fx-font-size: 12pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-background-color: #f14747;
+}
+
+.button:pressed{
+  -fx-background-color: #e62424;
+  -fx-text-fill: #ffffff;
+}
+
+.button:focused {
+
+    -fx-background-radius: 5;
+    -fx-font-weight: bold;
+    -fx-font-size: 12pt;
+    -fx-text-fill: #ffffff;
+}
+
+.button:disabled, .button:default:disabled {
+    
+    -fx-background-color: #f14747;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default {
+    -fx-background-color: #f86262
+    -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+/*.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}*/

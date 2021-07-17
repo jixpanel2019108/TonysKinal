@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteServicios" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9c0f0d5b-dd4f-4dfa-8dcf-3f73a1697f70">
+	<property name="ireport.zoom" value="1.0000000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codServicio" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_ReporteServicios($P{codServicio});]]>
+	</queryString>
+	<field name="codigoServicio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaServicio" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaServicio" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lugarServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombrePlato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcionPlato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="precioPlato" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoTipoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcionTipoPlato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String"/>
+	<field name="codigoProducto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreProducto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="555" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="802" height="555" uuid="b47362f6-9ff9-4658-a568-4930fad2a7f3"/>
+				<imageExpression><![CDATA["C:\\Users\\Jonatan\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019108\\src\\org\\jonatanixpanel\\img\\FondoColor.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="135" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="802" height="123" uuid="6ad8dc25-27ea-439c-9256-8be50e1b16cd"/>
+				<imageExpression><![CDATA["C:\\Users\\Jonatan\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019108\\src\\org\\jonatanixpanel\\img\\Encabezadogoods.png"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame">
+				<reportElement x="102" y="13" width="64" height="42" uuid="10914ae6-b768-470f-a086-c12a536636cb"/>
+				<imageExpression><![CDATA["C:\\Users\\Jonatan\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019108\\src\\org\\jonatanixpanel\\img\\logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="59" y="61" width="151" height="34" uuid="8d03f07f-3e06-4d97-bc2c-22316b3559d5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Vani" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tony's Kinal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="59" y="84" width="151" height="21" uuid="176802c4-8e94-4c34-b0da-cdf010df7823"/>
+				<textElement textAlignment="Center">
+					<font fontName="Vani" size="12"/>
+				</textElement>
+				<text><![CDATA[FOOD SERVICE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="463" y="0" width="281" height="44" forecolor="#FFFFFF" uuid="4d8a6191-5b04-4283-a106-1db4b7784000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Vani" size="22"/>
+				</textElement>
+				<text><![CDATA[Tu gusto, nuesta pasión!]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="448" y="56" width="303" height="60" uuid="4386b70c-3409-4748-8d06-f3b9638a11e1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Vani" size="20" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE SERVICIOS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="404" y="101" width="359" height="1" uuid="018d78b6-4027-4396-adb6-0a68a54efed4"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="75" splitType="Stretch">
+			<textField>
+				<reportElement x="286" y="0" width="290" height="64" uuid="7858815d-2135-4e1a-8adb-2ceb2defbc88"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Calibri" size="24"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="286" height="63" uuid="406052e2-9684-42ff-adc3-3b8733fd58c2"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Calibri" size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Servicio a la Empresa:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="63" width="802" height="1" uuid="ddb67230-b9d3-48c3-845d-1bfa8b453f21"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="53" splitType="Stretch">
+			<staticText>
+				<reportElement x="13" y="1" width="148" height="31" uuid="7ec9b641-97b1-4760-bd61-d4e220ac9080"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Vani" size="14"/>
+				</textElement>
+				<text><![CDATA[Codigo de Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="0" width="148" height="31" uuid="f290d486-e85c-4d05-8f7a-72fd0afa9726"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Vani" size="14"/>
+				</textElement>
+				<text><![CDATA[Cantidad de Platos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="328" y="1" width="148" height="31" uuid="52082289-b59d-4b39-b5ce-354a46628f79"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Vani" size="14"/>
+				</textElement>
+				<text><![CDATA[Tipo de Plato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="506" y="1" width="148" height="31" uuid="0a1aa28d-07c4-4c00-a777-dad396ed4e09"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Vani" size="14"/>
+				</textElement>
+				<text><![CDATA[Productos]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="32" width="802" height="1" uuid="3ee7712a-fa4d-4135-8ba2-26049db53328"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="56" splitType="Stretch">
+			<textField>
+				<reportElement x="23" y="0" width="138" height="25" uuid="b442d1c4-8f8e-448d-ace3-1e10ba5efc80"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="186" y="0" width="100" height="25" uuid="0a1a45d9-6ae9-4e8c-bb82-b2e2683abea7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="328" y="0" width="166" height="25" uuid="fc76328f-8f90-4deb-8026-a13f5eb3819b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcionTipoPlato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="0" width="292" height="25" uuid="7b874da9-f04d-48c4-a577-363cd74f094c"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreProducto}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="Float" x="0" y="53" width="802" height="1" forecolor="#CC0033" uuid="fdbab3a3-9372-45a5-9ad8-6f161f075f46"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="76" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="52" width="802" height="23" uuid="7afbe476-063b-4422-896f-de4bf022024a"/>
+				<imageExpression><![CDATA["C:\\Users\\Jonatan\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019108\\src\\org\\jonatanixpanel\\img\\ParteDeAbajoGoosd.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="206" y="21" width="271" height="21" uuid="1254b4ac-5d2a-4e51-996f-07bdaa31a254"/>
+				<imageExpression><![CDATA["C:\\Users\\Jonatan\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019108\\src\\org\\jonatanixpanel\\img\\SimbolosReporte.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="239" y="21" width="100" height="31" uuid="3d4dba69-1223-4336-97ee-69fa4c2db2e3"/>
+				<textElement>
+					<font fontName="Vani" size="7" isBold="false" isItalic="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[TonysKinal.com
+TonysKinal@gmail.com
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="21" width="100" height="31" uuid="6ac0f575-6650-46ee-bfa9-6a367ed146d2"/>
+				<textElement>
+					<font fontName="Vani" size="7" isBold="false" isItalic="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[+502 42221991
++001 12345678
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="494" y="21" width="100" height="31" uuid="c75e36e8-7ddd-4078-8d7c-2f8c43efa95c"/>
+				<textElement>
+					<font fontName="Vani" size="7" isBold="false" isItalic="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Guatemala, Guatemala
+Col. Landivar Z.7 Kinal
+]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement x="138" y="2" width="520" height="9" uuid="c38e9584-742e-4ff1-a8d4-b613b292cc7d"/>
+				<imageExpression><![CDATA["C:\\Users\\Jonatan\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019108\\src\\org\\jonatanixpanel\\img\\lineacompleta.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="200">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="177" width="802" height="23" uuid="569c9e9d-e38b-4453-80e6-74b8a2502a4f"/>
+				<imageExpression><![CDATA["C:\\Users\\Jonatan\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019108\\src\\org\\jonatanixpanel\\img\\ParteDeAbajoGoosd.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="239" y="146" width="100" height="31" uuid="da49b384-cf52-495d-9084-b3071fc061b6"/>
+				<textElement>
+					<font fontName="Vani" size="7" isBold="false" isItalic="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[TonysKinal.com
+TonysKinal@gmail.com
+]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement x="138" y="127" width="520" height="9" uuid="b4175260-6087-49de-8832-2780d8787dd2"/>
+				<imageExpression><![CDATA["C:\\Users\\Jonatan\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019108\\src\\org\\jonatanixpanel\\img\\lineacompleta.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="206" y="146" width="271" height="21" uuid="ce7887f3-582d-484e-9e90-372b5a5b7d6d"/>
+				<imageExpression><![CDATA["C:\\Users\\Jonatan\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019108\\src\\org\\jonatanixpanel\\img\\SimbolosReporte.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="494" y="146" width="100" height="31" uuid="2a1e6da6-5515-43e0-8ce5-7780f87d1132"/>
+				<textElement>
+					<font fontName="Vani" size="7" isBold="false" isItalic="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Guatemala, Guatemala
+Col. Landivar Z.7 Kinal
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="146" width="100" height="31" uuid="828fd0b0-f454-491e-9435-e93520b378c9"/>
+				<textElement>
+					<font fontName="Vani" size="7" isBold="false" isItalic="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[+502 42221991
++001 12345678
+]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement x="331" y="0" width="132" height="97" uuid="0ddb20c3-9f4a-498c-9ed4-0e760f193ca2"/>
+				<imageExpression><![CDATA["C:\\Users\\Jonatan\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019108\\src\\org\\jonatanixpanel\\img\\Firma.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="286" y="77" width="211" height="1" uuid="d1351347-0f83-4d75-a1e3-5416d132dcf1"/>
+			</line>
+			<staticText>
+				<reportElement x="331" y="100" width="121" height="23" uuid="3a1f083c-80fb-487b-9187-c6538b20b9c0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Vani" size="12"/>
+				</textElement>
+				<text><![CDATA[GERENTE GENERAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="331" y="82" width="121" height="23" uuid="c4c2888f-7b6d-4fdc-9898-18f248afbfdd"/>
+				<textElement textAlignment="Center">
+					<font fontName="Vani" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jonatan Ixpanel]]></text>
+			</staticText>
+		</band>
+	</lastPageFooter>
+</jasperReport>
